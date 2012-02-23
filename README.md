@@ -1,4 +1,3 @@
-
 ## TranslatorBundle
 
 This bundle's purpose is to provide an interface for edition, addition and deletion
@@ -126,8 +125,17 @@ You can decide wheter or not it will be included automatically.
 
     knplabs_translator:
         include_vendor_assets: false # defaults to true
+        enabled: false # defaults to true
+        roles: [ ROLE_TRANSLATE ] # roles that are needed to see translation form, defaults to null
 
     ```
+
+Role based conditions
+---------------------
+
+Additionaly to `enabled` option, you can decide to display the translation form per user's roles.
+Users need to be authenticated and need all the roles you configured above to see the form.
+
 
 Services
 --------
